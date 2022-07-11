@@ -1,4 +1,3 @@
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^helpdev.me [NC]
 RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
