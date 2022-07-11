@@ -1,4 +1,18 @@
+nav {
+  transition: 500ms ease;
+}
+
+nav.scrolled {
+  background-color: #212529;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
 header,
 footer {
   background-image: url(./img/circuit-board.svg);
+}
+
+.btn,
+.form-control {
+  border-radius: 0;
 }
