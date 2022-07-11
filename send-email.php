@@ -1,26 +1,25 @@
 <?php
-require("./PHPMailer-6.6.0/src/PHPMailer.php");
-require("./PHPMailer-6.6.0/src/SMTP.php");
-
 $json = file_get_contents("php://input");
 $object = json_decode($json);
 
-$mail = new PHPMailer\PHPMailer\PHPMailer();
-$mail->IsSMTP();
-$mail->SMTPDebug = $_ENV["debug"];
-$mail->SMTPAuth = $_ENV["auth"];
-$mail->SMTPSecure = $_ENV["secure"];
-$mail->Host = $_ENV["host"];
-$mail->Port = $_ENV["port"];
-$mail->IsHTML(true);
-$mail->Username = $_ENV["username"];
-$mail->Password = $_ENV["password"];
-$mail->SetFrom($_ENV["from"]);
-$mail->Subject = "Novo contato do site de " . $object->name;
-$mail->Body = "Nome: " . $object->name . "<br>Email: " . $object->email;
-$mail->AddAddress($_ENV["address"]);
+$myEmail = $_ENV["address"];
 
-if(!$mail->Send()) {
+$email = $object->email;
+
+$subject = "Novo contato do site de " . $object->name;
+
+$headers = "From: $myEmail\r\n";
+$headers .= "Reply-To: $email\r\n";
+
+$body = "Formulário enviado\n";
+$body .= "Nome: " . $name . "\n";
+$body .= "Email: " . $email . "\n";
+
+$email_to = $myEmail;
+
+$status = mail($email_to, $subject, $body, $headers);
+
+if(!$status) {
     echo "Mailer Error: " . $mail->ErrorInfo;
 } else {
     return;
