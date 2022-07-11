@@ -5,8 +5,9 @@ $object = json_decode($json);
 $myEmail = $_ENV["address"];
 
 $email = $object->email;
+$name = $object->name;
 
-$subject = "Novo contato do site de " . $object->name;
+$subject = "Novo contato do site de " . $name;
 
 $headers = "From: $myEmail\r\n";
 $headers .= "Reply-To: $email\r\n";
