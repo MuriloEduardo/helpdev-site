@@ -236,8 +236,15 @@
             <p id="success-contact" class="text-white d-none">
               Contato enviado com sucesso 😍
             </p>
-            <button class="btn btn-success" type="submit">
+            <button id="btn-submit" class="btn btn-success" type="submit">
               Quero conhecer
+              <span
+                id="loader-sending"
+                class="spinner-border spinner-border-sm text-light ms-1 opacity-25 d-none"
+                role="status"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Enviando...</span>
             </button>
           </form>
         </div>

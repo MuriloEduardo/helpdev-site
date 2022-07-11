@@ -16,6 +16,14 @@ window.onload = () => {
     .addEventListener('submit', function (e) {
       e.preventDefault();
 
+      let loading = document.getElementById('loader-sending');
+      let successMessage = document.getElementById('success-contact');
+      let btnSubmit = document.getElementById('btn-submit');
+
+      loading.classList.remove('d-none');
+
+      btnSubmit.setAttribute('disabled', 'disabled');
+
       fetch('./send-email.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json; charset=UTF-8' },
@@ -23,8 +31,16 @@ window.onload = () => {
           name: document.getElementById('name').value,
           email: document.getElementById('email').value,
         }),
-      }).then((res) => {
-        document.getElementById('success-contact').classList.remove('d-none');
+      }).then(() => {
+        loading.classList.add('d-none');
+
+        btnSubmit.removeAttribute('disabled');
+
+        successMessage.classList.remove('d-none');
+
+        setTimeout(() => {
+          successMessage.classList.add('d-none');
+        }, 5000);
       });
     });
 };
