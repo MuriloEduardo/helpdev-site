@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /img/
+
+User-Agent: *
+Allow: index.html
+
+Sitemap: http://helpdev.me/sitemap.xml
