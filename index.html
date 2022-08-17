@@ -57,7 +57,7 @@
         id="navbar-main"
         class="navbar navbar-expand-md navbar-dark fixed-top"
       >
-        <div class="container-fluid">
+        <div class="container">
           <a class="navbar-brand" href="#peca-ajuda">
             <img src="./img/logo-helpdev.svg" alt="Help Dev .Me" />
             Help Dev .Me
@@ -106,7 +106,7 @@
         id="peca-ajuda"
         class="vh-100 bg-success text-light d-flex align-items-center"
       >
-        <div class="container-fluid">
+        <div class="container">
           <div class="d-flex">
             <div>
               <h1 class="display-1 mb-3">
@@ -126,7 +126,7 @@
         </div>
       </header>
       <section id="ajude-alguem" class="py-5">
-        <div class="container-fluid">
+        <div class="container">
           <div class="row align-items-center">
             <div class="col-md order-md-1 order-2">
               <h2 class="display-6">
@@ -156,9 +156,9 @@
         class="vh-md-100 py-5 bg-success text-white d-flex align-items-center"
       >
         <div class="container-fluid">
-          <h2 class="display-5">Como funciona?</h2>
-          <div class="d-md-flex mt-5">
-            <div class="px-3">
+          <h2 class="display-5 text-center">Como funciona?</h2>
+          <div class="d-xl-flex flex-xl-nowrap mt-5">
+            <div class="p-3">
               <strong
                 class="display-6 rounded-circle bg-white text-success px-2"
                 >1</strong
@@ -168,7 +168,7 @@
                 desenvolvimento e resolve dar uma chance para o Help Dev.
               </p>
             </div>
-            <div class="px-3">
+            <div class="p-3">
               <strong
                 class="display-6 rounded-circle bg-white text-success px-2"
                 >2</strong
@@ -179,7 +179,7 @@
                 recompensa caso seja ajudado.
               </p>
             </div>
-            <div class="px-3">
+            <div class="p-3">
               <strong
                 class="display-6 rounded-circle bg-white text-success px-2"
                 >3</strong
@@ -190,7 +190,7 @@
                 rápidamente tentar lhe ajudar.
               </p>
             </div>
-            <div class="px-3">
+            <div class="p-3">
               <strong
                 class="display-6 rounded-circle bg-white text-success px-2"
                 >4</strong
@@ -201,7 +201,7 @@
                 ajudado. Vocês poderão ajustar as recompensas se necessário!
               </p>
             </div>
-            <div class="px-3">
+            <div class="p-3">
               <strong
                 class="display-6 rounded-circle bg-white text-success px-2"
                 >5</strong
@@ -213,7 +213,7 @@
                 Tudo para que sua dúvida seja respondida da melhor forma.
               </p>
             </div>
-            <div class="px-3">
+            <div class="p-3">
               <strong
                 class="display-6 rounded-circle bg-white text-success px-2"
                 >6</strong
@@ -234,51 +234,63 @@
       </section>
       <footer id="quero-conhecer" class="bg-dark text-white py-5">
         <div class="container">
-          <h2 class="display-5">Quero conhecer</h2>
-          <p class="lead">
-            Estamos abrindo a lista de emails inicial com vagas limitas!
-          </p>
-          <form id="contact-form" name="contact" class="mt-4">
-            <div class="mb-3">
-              <label for="name" class="form-label"
-                >Como podemos te chamar?</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Como podemos te chamar?"
-                name="name"
-                id="name"
-                required
-              />
+          <h2 class="display-5 text-center">Quero conhecer</h2>
+          <div class="row align-items-center mt-5">
+            <div class="col-md">
+              <p class="lead">
+                Para saber mais atualizações desse projeto
+              </p>
+              <form id="contact-form" name="contact" class="mt-4">
+                <div class="mb-3">
+                  <label for="name" class="form-label"
+                    >Como podemos te chamar?</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="name"
+                    id="name"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label for="name" class="form-label"
+                    >Deixe seu melhor email</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    required
+                  />
+                </div>
+                <p id="success-contact" class="text-white d-none">
+                  Contato enviado com sucesso 😍
+                </p>
+                <button id="btn-submit" class="btn btn-success" type="submit">
+                  Avise-me sobre atualizações
+                  <span
+                    id="loader-sending"
+                    class="spinner-border spinner-border-sm text-light ms-1 opacity-25 d-none"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Enviando...</span>
+                </button>
+              </form>
             </div>
-            <div class="mb-4">
-              <label for="name" class="form-label"
-                >Deixe seu melhor email</label
-              >
-              <input
-                type="email"
-                class="form-control"
-                placeholder="Deixe seu melhor email"
-                name="email"
-                id="email"
-                required
-              />
+            <div class="col-md">
+              <div class="d-flex justify-content-center">
+                <a
+                  href="https://helpdev-app.herokuapp.com/"
+                  target="_blank"
+                  class="btn btn-lg btn-warning mt-5 mt-md-0"
+                  >Ajudar a testar</a
+                >
+              </div>
             </div>
-            <p id="success-contact" class="text-white d-none">
-              Contato enviado com sucesso 😍
-            </p>
-            <button id="btn-submit" class="btn btn-success" type="submit">
-              Quero conhecer
-              <span
-                id="loader-sending"
-                class="spinner-border spinner-border-sm text-light ms-1 opacity-25 d-none"
-                role="status"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Enviando...</span>
-            </button>
-          </form>
+          </div>
         </div>
       </footer>
     </main>
