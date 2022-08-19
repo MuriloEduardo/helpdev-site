@@ -1,10 +1,4 @@
-User-Agent: *
-Allow: /img/
-
-User-Agent: *
-Allow: index.html
+User-agent: *
+Allow: /
 
 Sitemap: http://helpdev.me/sitemap.xml
-
-User-agent: AdsBot-Google
-Disallow:
