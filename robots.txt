@@ -5,3 +5,6 @@ User-Agent: *
 Allow: index.html
 
 Sitemap: http://helpdev.me/sitemap.xml
+
+User-agent: AdsBot-Google
+Disallow:
