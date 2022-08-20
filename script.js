@@ -1,12 +1,3 @@
-// Event snippet for Cadastro de Leeds conversion page
-// In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button.
-function gtag_report_conversion() {
-  gtag('event', 'conversion', {
-    send_to: 'AW-995742279/wX6iCMn11moQx6Tn2gM',
-  });
-  return false;
-}
-
 scrolled = (nav) => {
   nav.classList.toggle('scrolled', window.scrollY > 50);
 };
