@@ -14,9 +14,9 @@ window.onload = () => {
   document
     .getElementById('contact-form')
     .addEventListener('submit', function (e) {
-      e.preventDefault();
-
       gtag_report_conversion();
+      
+      e.preventDefault();
 
       let loading = document.getElementById('loader-sending');
       let successMessage = document.getElementById('success-contact');
