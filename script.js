@@ -1,5 +1,3 @@
-const eventGtagReportConversion = new CustomEvent('gtag_report_conversion');
-
 scrolled = (nav) => {
   nav.classList.toggle('scrolled', window.scrollY > 50);
 };
@@ -16,8 +14,6 @@ window.onload = () => {
   document
     .getElementById('contact-form')
     .addEventListener('submit', function (e) {
-      e.target.dispatchEvent(eventGtagReportConversion);
-
       e.preventDefault();
 
       let loading = document.getElementById('loader-sending');
